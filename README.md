@@ -44,3 +44,9 @@ tcm WorkoutProfiler$ python -m venv venv
 tcm WorkoutProfiler$ . ./venv/bin/activate
 (venv) tcm WorkoutProfiler$ pip install --upgrade pip; pip install -r requirements.txt
 ```
+
+Contributing
+Contributions are welcome! Feel free to submit pull requests or open issues to improve the app.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
