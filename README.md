@@ -39,7 +39,8 @@ WorkoutProfiler is an open-source application designed to help fitness trainers 
 
 ## Installation
 
-1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/WorkoutProfiler.git
-   cd WorkoutProfiler
+tcm WorkoutProfiler$ python -m venv venv
+tcm WorkoutProfiler$ . ./venv/bin/activate
+(venv) tcm WorkoutProfiler$ pip install --upgrade pip; pip install -r requirements.txt
+```
