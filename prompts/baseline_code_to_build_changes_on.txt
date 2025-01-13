@@ -1,0 +1,116 @@
+baseline_code_to_build_changes_on.txt
+
+my directory structure:
+
+workout_profiler/
+├── streamlit_app.py              # Main Streamlit entry point (Snowflake looks for this by default)
+├── pages/
+│   ├── all_workouts.py       # Top-level page where all the workouts are listed
+│   ├── workout_details.py        # Each workout and its exercises are profiled on this page
+│   └── exercise_details.py       # Each exercise within a workout has details and lineage listed here.
+
+
+
+below is my main entry point for streamlit and the relevant pages.
+
+The output 
+
+streamlit_app.py
+=================
+
+import streamlit as st
+from pages.all_workouts import show_all_workouts
+
+st.set_page_config(
+    page_title="Workout Dashboard",
+    page_icon=":runner:",
+    layout="wide",
+)
+
+st.title("Welcome to the Workout Dashboard")
+st.markdown("Explore all workouts below.")
+
+# Call the function to show all workouts
+show_all_workouts()
+
+
+pages/all_workouts.py
+=====================
+
+import streamlit as st
+from helpers.snowflake_connection import create_snowflake_connection
+from helpers.data_processing import fetch_query_results
+from helpers.sql_queries import ALL_WORKOUTS_QUERY
+import pandas as pd
+
+def show_all_workouts():
+    st.title("All Workouts")
+
+    # Fetch data from Snowflake
+    try:
+        conn = create_snowflake_connection()
+        cursor = conn.cursor()
+        cursor.execute(ALL_WORKOUTS_QUERY)
+        df = fetch_query_results(cursor)
+        cursor.close()
+        conn.close()
+    except Exception as e:
+        st.error(f"An error occurred while fetching workouts: {e}")
+        df = pd.DataFrame()
+
+
+    # Display the data using st.data_editor
+    if not df.empty:
+        st.write("Data from all_workouts table:")
+        
+        # Create a column configuration for the workout_name column
+        workout_name_column = st.column_config.LinkColumn(
+            "workout_name",
+            help="Click to view workout details",
+            width="medium",
+            validate="^[A-Za-z0-9 ]+$",
+        )
+
+        # Use st.data_editor with the column configuration
+        edited_df = st.data_editor(
+            df,
+            column_config={
+                "workout_name": workout_name_column,
+            },
+            hide_index=True,
+            disabled=["workout_name"],  # Make the workout_name column non-editable
+            use_container_width=True
+        )
+
+        # Check if a workout was clicked
+        if st.session_state.get('data_editor_clicked'):
+            clicked_workout = st.session_state['data_editor_clicked']['workout_name']['value']
+            st.switch_page("pages/workout_details.py")
+            st.experimental_set_query_params(workout=clicked_workout)
+
+# This allows the function to be called from streamlit_app.py
+if __name__ == "__main__":
+    show_all_workouts()
+
+
+
+pages/workout_details.py
+========================
+
+import streamlit as st
+
+def main():
+    # Get the workout name from query parameters
+    query_params = st.experimental_get_query_params()
+    workout_name = query_params.get("workout", [""])[0]  # Default to empty string if not found
+
+    # Display the workout details
+    if workout_name:
+        st.title(f"Hello {workout_name}")
+    else:
+        st.error("No workout name provided.")
+
+if __name__ == "__main__":
+    main()
+
+

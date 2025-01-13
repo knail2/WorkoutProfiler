@@ -1,0 +1,19 @@
+create code for a streamlit with the following dir structure:  
+
+workout_profiler/
+├── streamlit_app.py              # Main Streamlit entry point (Snowflake looks for this by default)
+├── pages/
+│   ├── All_Workouts_TOC.py       # Top-level page where all the workouts are listed
+│   ├── Workout_Details.py        # Each workout and its exercises are profiled on this page
+│   └── Exercise_Details.py		  # Each exercise within a workout has details and lineage listed here.
+
+
+streamlit_app is the main entry point
+
+All_Workouts_TOC is the first page that is rendered. it listed 2 workouts by 2 different trainers, use some random names.
+
+each name of the workout is hyperlinked. when one clicks on the hyperlink the workout details page opens exclusively for that workout. the details page shows the specific 3 exercises each for the workout clicked. these are exclusive to the workouts. make their names up. ensure that workout details gets the context passed of which wokrout it is via the click.
+
+in the workout details page each exercise has a hyperlink . when clicked, it opens another page with that specific exercise's image. pull some links of workout images  and populate those in a href.
+
+write the code for each of these files and any others i missed, and then tell me how to run it locally on  my mac

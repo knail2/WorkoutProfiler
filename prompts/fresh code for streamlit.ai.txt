@@ -1,0 +1,81 @@
+fresh code for streamlit.ai.txt 
+
+I want you to write the code for the streamlit_app.py which calls pages/ code.
+
+
+I want you to change this code below as well
+
+- instead of data frame use data_editor just like you used in the earlier examples. 
+- only show the all workouts page on the left, not the workout details.
+- the main page for streamlit_app should render all workouts by default
+- scan the code replace any older (experimental etc) st calls with the new library ones.
+- each cell within the workout column has a hyperlink which loads the details for that workout. 
+	- when I click on that workout link, I want to call workout_details.py and send it the name of the workout as an argument and print hello <argument>
+
+
+
+
+streamlit_app.py:
+=================
+import streamlit as st
+
+st.set_page_config(
+    page_title="Workout Dashboard",
+    page_icon=":runner:",
+    layout="wide",
+)
+
+st.title("Welcome to the Workout Dashboard")
+st.markdown("Navigate through the pages to explore workouts.")
+
+
+
+
+pages/all_workouts.py
+=====================
+
+import streamlit as st
+from helpers.snowflake_connection import create_snowflake_connection
+from helpers.data_processing import fetch_query_results
+from helpers.sql_queries import ALL_WORKOUTS_QUERY
+import pandas as pd
+
+st.title("All Workouts")
+
+# Fetch data from Snowflake
+try:
+    conn = create_snowflake_connection()
+    cursor = conn.cursor()
+    cursor.execute(ALL_WORKOUTS_QUERY)
+    df = fetch_query_results(cursor)
+    cursor.close()
+    conn.close()
+except Exception as e:
+    st.error(f"An error occurred while fetching workouts: {e}")
+    df = pd.DataFrame()
+
+# Display the data
+if not df.empty:
+    st.write("Data from all_workouts table:")
+    st.dataframe(df)
+
+    # Add dynamic links for each workout
+    for workout_name in df['workout_name']:
+        workout_link = f"[{workout_name}](./workout_details?workout={workout_name})"
+        st.markdown(workout_link, unsafe_allow_html=True)
+
+
+
+pages/workout_details.py
+========================
+import streamlit as st
+
+# Get the workout name from query parameters
+query_params = st.experimental_get_query_params()
+workout_name = query_params.get("workout", [""])[0]  # Default to empty string if not found
+
+# Display the workout details
+if workout_name:
+    st.title(f"Hello {workout_name}!")
+else:
+    st.error("No workout name provided.")

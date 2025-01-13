@@ -1,0 +1,72 @@
+coding_prompt.txt
+
+write a product spec in markdown for the application I'm trying to build. there are two goals for this product spec. I want to put this in the repo for folks to review. I also want to feed this to a new GPT4o chat with no history of our conversation so that it is able to comprehensively write out the code for this spec. 
+
+
+This is the directory structure for the streamlit application
+
+
+workout_profiler/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml            # GitHub Actions workflow for automatic deployment
+├── .gitignore
+├── .environment				  # stores credentials locally (doesn't get committed to git)
+├── README.md                     # Project overview/documentation
+├── requirements.txt              # Python dependencies for your app
+├── streamlit_app.py              # Main Streamlit entry point (Snowflake looks for this by default)
+├── app_config/
+│   └── environment.py            # Detect if running locally or in Snowflake; set environment variables
+├── helpers/
+│   ├── snowflake_connection.py   # connection logic (if running locally) to connect to Snowflake
+│   ├── data_processing.py        # Reusable data transformation/util functions
+│   └── sql_queries.py            # SQL helper functions (SELECT, INSERT, UPDATE)
+├── pages/
+│   ├── All_Workouts_TOC.py       # Top-level page where all the workouts are listed
+│   ├── Workout_Details.py        # Each workout and its exercises are profiled on this page
+│   └── Exercise_Details.py		  # Each exercise within a workout has details and lineage listed here.
+├── resources/
+│   ├── images/                   # App images where the workout and exercise images are
+│   └── js/                       # Third-party & custom JS libraries
+│       ├── cytoscape.min.js
+│       ├── d3.min.js
+│       └── custom_code.js     	  # JS code accessed by Workout_Details.py and Exercise_Details.py
+└── scripts/
+    ├── upload_to_snowflake.py    # Example Python script to PUT code into Snowflake stage
+    └── update_streamlit_app.py   # Example script to CREATE/UPDATE the Snowflake Streamlit app
+
+
+
+
+the data that this streamlit app pages access is detailed below in context of each of the pages:
+
+All_Workouts_TOC page:
+======================
+
+The All_Workouts_TOC page access data from this table in snowflake:
+
+CREATE OR REPLACE TABLE all_workouts (
+    workout_id INT AUTOINCREMENT PRIMARY KEY, -- Unique identifier for each workout
+    workout_name VARCHAR(100),               -- Name of the workout
+    workout_type VARCHAR(50),                -- Type of the workout (e.g., cardio, HIIT)
+    trainer_name VARCHAR(50)                 -- Trainer associated with the workout
+);
+
+-- Insert dummy data
+INSERT INTO all_workouts (workout_name, workout_type, trainer_name) VALUES
+('Cardio Blast', 'Cardio', 'Tony Horton'),
+('HIIT Burnout', 'HIIT', 'Tony Horton'),
+('Strength Circuit', 'Strength', 'Tony Horton'),
+('Endurance Max', 'Endurance', 'Tony Horton'),
+('Hypertrophy Builder', 'Hypertrophy', 'Jackson Bloor'),
+('Stretch and Recover', 'Stretching', 'Jackson Bloor'),
+('HIIT Power', 'HIIT', 'Jackson Bloor'),
+('Functional Fitness', 'Strength', 'Jackson Bloor'),
+('Muscle Growth Focus', 'Hypertrophy', 'Sagi Kalev'),
+('Ultimate Flexibility', 'Stretching', 'Sagi Kalev');
+
+
+
+This data will be neatly visualized in a tabular fashion in html, showing a table with the three columns.
+
+Each workout name would be hyperlinked to Workout_Details.py. 
