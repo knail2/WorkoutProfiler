@@ -1,0 +1,177 @@
+exercise_id,workout_id,exercise_name,exercise_description,critical_exercise_selection,exercise_classification,strength,endurance,flexibility,balance,cardio,power,primary_movement,current_row,from_date,to_date,profiled_by
+1,1,Jumping Jacks,3 sets of 9 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-11-06 17:21:39,2024-12-07 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+1,1,Jumping Jacks,3 sets of 9 reps.,false,Chest,false,false,false,false,false,false,false,true,2024-12-12 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+2,1,Deadlifts,4 sets of 9 reps.,true,Arms,true,false,false,false,false,true,true,false,2024-11-06 17:21:39,2024-12-02 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+2,1,Deadlifts,4 sets of 9 reps.,true,Arms,true,false,false,false,false,true,true,true,2024-12-07 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+3,1,Plank Holds,5 sets of 10 reps.,true,Arms,false,false,true,false,false,false,false,false,2024-11-06 17:21:39,2024-12-02 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+3,1,Plank Holds,5 sets of 10 reps.,true,Arms,false,false,true,false,false,false,false,true,2024-11-29 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+4,1,Tricep Dips,4 sets of 8 reps.,true,Bodyweight,false,true,false,false,false,false,false,false,2024-11-06 17:21:39,2024-12-13 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+4,1,Tricep Dips,4 sets of 8 reps.,true,Bodyweight,false,true,false,false,false,false,false,true,2024-11-28 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+5,1,Lunges,5 sets of 9 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-11-06 17:21:39,2024-11-26 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+5,1,Lunges,5 sets of 9 reps.,false,Chest,false,false,false,false,false,false,false,true,2024-12-05 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+6,1,Push-ups,5 sets of 13 reps.,false,Cardio,false,false,false,false,false,false,false,false,2024-11-06 17:21:39,2024-12-06 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+6,1,Push-ups,5 sets of 13 reps.,false,Cardio,false,false,false,false,false,false,false,true,2024-11-29 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+7,1,Pull-ups,5 sets of 12 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-11-06 17:21:39,2024-11-27 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+7,1,Pull-ups,5 sets of 12 reps.,false,Chest,false,false,false,false,false,false,false,true,2024-12-05 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+8,1,Push-ups,5 sets of 11 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-11-06 17:21:39,2024-12-06 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+8,1,Push-ups,5 sets of 11 reps.,false,Chest,false,false,false,false,false,false,false,true,2024-11-26 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+9,1,Dumbbell Rows,5 sets of 12 reps.,false,Back,false,false,false,false,false,false,false,false,2024-11-06 17:21:39,2024-12-07 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+9,1,Dumbbell Rows,5 sets of 12 reps.,false,Back,false,false,false,false,false,false,false,true,2024-12-01 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+10,1,Dumbbell Rows,5 sets of 8 reps.,false,Legs,false,false,false,false,false,false,false,false,2024-11-06 17:21:39,2024-12-13 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+10,1,Dumbbell Rows,5 sets of 8 reps.,false,Legs,false,false,false,false,false,false,false,true,2024-12-04 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+11,2,Bicep Curls,4 sets of 10 reps.,true,Cardio,true,false,false,false,false,false,false,false,2024-12-13 17:21:39,2025-01-10 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+11,2,Bicep Curls,4 sets of 10 reps.,true,Cardio,true,false,false,false,false,false,false,true,2025-01-06 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+12,2,Push-ups,4 sets of 13 reps.,true,Arms,false,false,false,false,false,true,false,false,2024-12-13 17:21:39,2025-01-16 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+12,2,Push-ups,4 sets of 13 reps.,true,Arms,false,false,false,false,false,true,false,true,2025-01-21 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+13,2,Leg Press,5 sets of 10 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-12-13 17:21:39,2025-01-07 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+13,2,Leg Press,5 sets of 10 reps.,false,Chest,false,false,false,false,false,false,false,true,2025-01-18 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+14,2,Dumbbell Rows,5 sets of 15 reps.,true,Cardio,false,false,false,false,true,false,false,false,2024-12-13 17:21:39,2025-01-20 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+14,2,Dumbbell Rows,5 sets of 15 reps.,true,Cardio,false,false,false,false,true,false,false,true,2025-01-14 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+15,2,Dumbbell Rows,4 sets of 15 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-12-13 17:21:39,2025-01-08 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+15,2,Dumbbell Rows,4 sets of 15 reps.,false,Chest,false,false,false,false,false,false,false,true,2025-01-21 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+16,2,Burpees,5 sets of 15 reps.,false,Back,false,false,false,false,false,false,false,false,2024-12-13 17:21:39,2025-01-22 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+16,2,Burpees,5 sets of 15 reps.,false,Back,false,false,false,false,false,false,false,true,2025-01-21 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+17,2,Pull-ups,5 sets of 8 reps.,true,Chest,false,false,false,true,false,false,false,false,2024-12-13 17:21:39,2025-01-09 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+17,2,Pull-ups,5 sets of 8 reps.,true,Chest,false,false,false,true,false,false,false,true,2025-01-17 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+18,2,Cable Flys,4 sets of 13 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-12-13 17:21:39,2025-01-11 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+18,2,Cable Flys,4 sets of 13 reps.,false,Chest,false,false,false,false,false,false,false,true,2025-01-15 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+19,2,Plank Holds,5 sets of 15 reps.,true,Arms,false,false,false,false,false,true,false,false,2024-12-13 17:21:39,2025-01-03 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+19,2,Plank Holds,5 sets of 15 reps.,true,Arms,false,false,false,false,false,true,false,true,2025-01-06 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+21,3,Overhead Press,3 sets of 15 reps.,false,Legs,false,false,false,false,false,false,false,false,2024-12-18 17:21:39,2025-01-08 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+21,3,Overhead Press,3 sets of 15 reps.,false,Legs,false,false,false,false,false,false,false,true,2025-01-24 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+22,3,Bench Press,5 sets of 13 reps.,false,Cardio,false,true,false,true,false,false,true,false,2024-12-18 17:21:39,2025-01-13 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+22,3,Bench Press,5 sets of 13 reps.,false,Cardio,false,true,false,true,false,false,true,true,2025-01-27 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+23,3,Tricep Dips,5 sets of 15 reps.,true,Cardio,false,false,false,false,false,true,false,false,2024-12-18 17:21:39,2025-01-12 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+23,3,Tricep Dips,5 sets of 15 reps.,true,Cardio,false,false,false,false,false,true,false,true,2025-01-10 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+24,3,Jumping Jacks,4 sets of 11 reps.,true,Back,false,false,false,false,true,false,false,false,2024-12-18 17:21:39,2025-01-17 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+24,3,Jumping Jacks,4 sets of 11 reps.,true,Back,false,false,false,false,true,false,false,true,2025-01-08 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+25,3,Bench Press,4 sets of 9 reps.,true,Legs,true,false,true,false,false,false,true,false,2024-12-18 17:21:39,2025-01-25 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+25,3,Bench Press,4 sets of 9 reps.,true,Legs,true,false,true,false,false,false,true,true,2025-01-08 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+26,3,Bench Press,3 sets of 13 reps.,true,Legs,false,true,true,false,false,false,true,false,2024-12-18 17:21:39,2025-01-11 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+26,3,Bench Press,3 sets of 13 reps.,true,Legs,false,true,true,false,false,false,true,true,2025-01-12 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+27,3,Overhead Press,5 sets of 10 reps.,true,Arms,true,false,false,false,false,false,false,false,2024-12-18 17:21:39,2025-01-26 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+27,3,Overhead Press,5 sets of 10 reps.,true,Arms,true,false,false,false,false,false,false,true,2025-01-12 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+28,3,Overhead Press,4 sets of 9 reps.,false,Arms,false,false,false,false,false,false,false,false,2024-12-18 17:21:39,2025-01-08 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+28,3,Overhead Press,4 sets of 9 reps.,false,Arms,false,false,false,false,false,false,false,true,2025-01-21 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+29,3,Bench Press,4 sets of 10 reps.,false,Chest,false,false,true,false,false,true,true,false,2024-12-18 17:21:39,2025-01-13 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+29,3,Bench Press,4 sets of 10 reps.,false,Chest,false,false,true,false,false,true,true,true,2025-01-21 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+30,3,Burpees,4 sets of 10 reps.,true,Bodyweight,false,false,false,false,false,true,false,false,2024-12-18 17:21:39,2025-01-11 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+30,3,Burpees,4 sets of 10 reps.,true,Bodyweight,false,false,false,false,false,true,false,true,2025-01-27 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+31,4,Bicep Curls,5 sets of 9 reps.,true,Arms,false,false,false,false,true,false,false,false,2024-11-09 17:21:39,2024-12-12 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+31,4,Bicep Curls,5 sets of 9 reps.,true,Arms,false,false,false,false,true,false,false,true,2024-12-09 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+32,4,Mountain Climbers,5 sets of 14 reps.,false,Back,false,false,false,false,false,false,false,false,2024-11-09 17:21:39,2024-12-16 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+32,4,Mountain Climbers,5 sets of 14 reps.,false,Back,false,false,false,false,false,false,false,true,2024-12-09 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+33,4,Plank Holds,3 sets of 9 reps.,true,Chest,false,false,false,true,false,false,false,false,2024-11-09 17:21:39,2024-12-17 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+33,4,Plank Holds,3 sets of 9 reps.,true,Chest,false,false,false,true,false,false,false,true,2024-11-29 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+34,4,Cable Flys,5 sets of 15 reps.,false,Bodyweight,false,false,false,false,false,false,false,false,2024-11-09 17:21:39,2024-12-01 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+34,4,Cable Flys,5 sets of 15 reps.,false,Bodyweight,false,false,false,false,false,false,false,true,2024-12-12 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+35,4,Mountain Climbers,4 sets of 13 reps.,false,Arms,false,false,false,false,false,false,false,false,2024-11-09 17:21:39,2024-12-11 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+35,4,Mountain Climbers,4 sets of 13 reps.,false,Arms,false,false,false,false,false,false,false,true,2024-12-05 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+36,4,Plank Holds,5 sets of 9 reps.,true,Legs,false,false,false,false,true,false,false,false,2024-11-09 17:21:39,2024-11-29 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+36,4,Plank Holds,5 sets of 9 reps.,true,Legs,false,false,false,false,true,false,false,true,2024-11-30 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+37,4,Push-ups,3 sets of 10 reps.,true,Cardio,true,false,false,false,false,false,false,false,2024-11-09 17:21:39,2024-12-04 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+37,4,Push-ups,3 sets of 10 reps.,true,Cardio,true,false,false,false,false,false,false,true,2024-11-30 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+38,4,Overhead Press,5 sets of 15 reps.,true,Bodyweight,false,true,false,false,false,false,false,false,2024-11-09 17:21:39,2024-12-07 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+38,4,Overhead Press,5 sets of 15 reps.,true,Bodyweight,false,true,false,false,false,false,false,true,2024-12-01 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+39,4,Plank Holds,3 sets of 8 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-11-09 17:21:39,2024-12-02 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+39,4,Plank Holds,3 sets of 8 reps.,false,Chest,false,false,false,false,false,false,false,true,2024-12-03 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+41,5,Burpees,3 sets of 15 reps.,false,Back,false,false,false,false,false,false,false,false,2024-12-23 17:21:39,2025-01-18 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+41,5,Burpees,3 sets of 15 reps.,false,Back,false,false,false,false,false,false,false,true,2025-01-18 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+42,5,Squats,4 sets of 12 reps.,true,Legs,false,false,true,false,true,false,true,false,2024-12-23 17:21:39,2025-01-14 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+42,5,Squats,4 sets of 12 reps.,true,Legs,false,false,true,false,true,false,true,true,2025-01-25 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+43,5,Squats,4 sets of 15 reps.,true,Bodyweight,false,true,true,false,false,false,true,false,2024-12-23 17:21:39,2025-01-18 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+43,5,Squats,4 sets of 15 reps.,true,Bodyweight,false,true,true,false,false,false,true,true,2025-01-22 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+44,5,Bench Press,4 sets of 8 reps.,true,Legs,false,false,true,false,false,true,true,false,2024-12-23 17:21:39,2025-01-15 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+44,5,Bench Press,4 sets of 8 reps.,true,Legs,false,false,true,false,false,true,true,true,2025-01-29 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+45,5,Deadlifts,4 sets of 12 reps.,false,Arms,true,false,true,false,false,false,true,false,2024-12-23 17:21:39,2025-01-31 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+45,5,Deadlifts,4 sets of 12 reps.,false,Arms,true,false,true,false,false,false,true,true,2025-01-29 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+46,5,Jumping Jacks,3 sets of 13 reps.,false,Back,false,false,false,false,false,false,false,false,2024-12-23 17:21:39,2025-01-25 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+46,5,Jumping Jacks,3 sets of 13 reps.,false,Back,false,false,false,false,false,false,false,true,2025-01-31 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+47,5,Leg Press,3 sets of 15 reps.,true,Back,false,false,true,false,false,false,false,false,2024-12-23 17:21:39,2025-01-21 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+47,5,Leg Press,3 sets of 15 reps.,true,Back,false,false,true,false,false,false,false,true,2025-01-24 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+48,5,Plank Holds,3 sets of 10 reps.,true,Bodyweight,true,false,false,false,false,false,false,false,2024-12-23 17:21:39,2025-01-31 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+48,5,Plank Holds,3 sets of 10 reps.,true,Bodyweight,true,false,false,false,false,false,false,true,2025-01-15 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+49,5,Deadlifts,5 sets of 14 reps.,false,Cardio,false,true,false,true,false,false,true,false,2024-12-23 17:21:39,2025-01-13 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+49,5,Deadlifts,5 sets of 14 reps.,false,Cardio,false,true,false,true,false,false,true,true,2025-01-13 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+51,6,Deadlifts,3 sets of 8 reps.,false,Bodyweight,true,true,false,false,false,false,true,false,2024-11-28 17:21:39,2025-01-06 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+51,6,Deadlifts,3 sets of 8 reps.,false,Bodyweight,true,true,false,false,false,false,true,true,2025-01-04 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+52,6,Pull-ups,3 sets of 12 reps.,false,Back,false,false,false,false,false,false,false,false,2024-11-28 17:21:39,2024-12-28 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+52,6,Pull-ups,3 sets of 12 reps.,false,Back,false,false,false,false,false,false,false,true,2025-01-07 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+53,6,Bench Press,4 sets of 9 reps.,false,Chest,false,false,true,false,true,false,true,false,2024-11-28 17:21:39,2024-12-23 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+53,6,Bench Press,4 sets of 9 reps.,false,Chest,false,false,true,false,true,false,true,true,2024-12-18 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+54,6,Pull-ups,5 sets of 8 reps.,true,Cardio,false,false,false,false,false,true,false,false,2024-11-28 17:21:39,2024-12-27 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+54,6,Pull-ups,5 sets of 8 reps.,true,Cardio,false,false,false,false,false,true,false,true,2025-01-01 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+55,6,Lunges,5 sets of 10 reps.,true,Legs,false,true,false,false,false,false,false,false,2024-11-28 17:21:39,2024-12-23 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+55,6,Lunges,5 sets of 10 reps.,true,Legs,false,true,false,false,false,false,false,true,2024-12-26 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+56,6,Squats,3 sets of 14 reps.,true,Bodyweight,true,false,false,false,false,true,true,false,2024-11-28 17:21:39,2024-12-19 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+56,6,Squats,3 sets of 14 reps.,true,Bodyweight,true,false,false,false,false,true,true,true,2024-12-31 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+57,6,Lunges,3 sets of 11 reps.,true,Arms,false,true,false,false,false,false,false,false,2024-11-28 17:21:39,2024-12-26 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+57,6,Lunges,3 sets of 11 reps.,true,Arms,false,true,false,false,false,false,false,true,2024-12-22 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+58,6,Leg Press,3 sets of 12 reps.,true,Cardio,false,false,false,false,true,false,false,false,2024-11-28 17:21:39,2025-01-05 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+58,6,Leg Press,3 sets of 12 reps.,true,Cardio,false,false,false,false,true,false,false,true,2024-12-27 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+61,7,Bench Press,3 sets of 15 reps.,true,Back,true,true,false,false,false,false,true,false,2024-11-30 17:21:39,2024-12-27 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+61,7,Bench Press,3 sets of 15 reps.,true,Back,true,true,false,false,false,false,true,true,2024-12-24 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+62,7,Lunges,4 sets of 10 reps.,true,Chest,false,false,false,false,false,true,false,false,2024-11-30 17:21:39,2024-12-26 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+62,7,Lunges,4 sets of 10 reps.,true,Chest,false,false,false,false,false,true,false,true,2024-12-27 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+63,7,Jumping Jacks,4 sets of 9 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-11-30 17:21:39,2024-12-27 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+63,7,Jumping Jacks,4 sets of 9 reps.,false,Chest,false,false,false,false,false,false,false,true,2024-12-28 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+64,7,Mountain Climbers,5 sets of 10 reps.,true,Chest,true,false,false,false,false,false,false,false,2024-11-30 17:21:39,2025-01-05 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+64,7,Mountain Climbers,5 sets of 10 reps.,true,Chest,true,false,false,false,false,false,false,true,2024-12-23 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+65,7,Deadlifts,5 sets of 14 reps.,false,Chest,true,false,false,false,false,true,true,false,2024-11-30 17:21:39,2025-01-09 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+65,7,Deadlifts,5 sets of 14 reps.,false,Chest,true,false,false,false,false,true,true,true,2024-12-29 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+66,7,Mountain Climbers,4 sets of 9 reps.,false,Arms,false,false,false,false,false,false,false,false,2024-11-30 17:21:39,2025-01-04 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+66,7,Mountain Climbers,4 sets of 9 reps.,false,Arms,false,false,false,false,false,false,false,true,2025-01-04 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+67,7,Mountain Climbers,4 sets of 8 reps.,true,Bodyweight,false,false,false,false,false,true,false,false,2024-11-30 17:21:39,2025-01-01 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+67,7,Mountain Climbers,4 sets of 8 reps.,true,Bodyweight,false,false,false,false,false,true,false,true,2024-12-25 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+68,7,Tricep Dips,4 sets of 10 reps.,true,Arms,true,false,false,false,false,false,false,false,2024-11-30 17:21:39,2025-01-04 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+68,7,Tricep Dips,4 sets of 10 reps.,true,Arms,true,false,false,false,false,false,false,true,2025-01-06 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+71,8,Pull-ups,5 sets of 13 reps.,true,Arms,true,false,false,false,false,false,false,false,2024-11-29 17:21:39,2025-01-06 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+71,8,Pull-ups,5 sets of 13 reps.,true,Arms,true,false,false,false,false,false,false,true,2025-01-05 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+72,8,Deadlifts,4 sets of 8 reps.,true,Legs,false,false,true,false,true,false,true,false,2024-11-29 17:21:39,2024-12-26 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+72,8,Deadlifts,4 sets of 8 reps.,true,Legs,false,false,true,false,true,false,true,true,2024-12-23 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+73,8,Lunges,3 sets of 15 reps.,false,Legs,false,false,false,false,false,false,false,false,2024-11-29 17:21:39,2024-12-29 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+73,8,Lunges,3 sets of 15 reps.,false,Legs,false,false,false,false,false,false,false,true,2024-12-19 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+74,8,Tricep Dips,5 sets of 14 reps.,true,Back,false,false,false,false,true,false,false,false,2024-11-29 17:21:39,2025-01-07 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+74,8,Tricep Dips,5 sets of 14 reps.,true,Back,false,false,false,false,true,false,false,true,2024-12-25 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+75,8,Dumbbell Rows,3 sets of 13 reps.,false,Cardio,false,false,false,false,false,false,false,false,2024-11-29 17:21:39,2024-12-25 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+75,8,Dumbbell Rows,3 sets of 13 reps.,false,Cardio,false,false,false,false,false,false,false,true,2024-12-31 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+76,8,Overhead Press,4 sets of 12 reps.,true,Back,false,false,true,false,false,false,false,false,2024-11-29 17:21:39,2025-01-06 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+76,8,Overhead Press,4 sets of 12 reps.,true,Back,false,false,true,false,false,false,false,true,2024-12-21 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+77,8,Bicep Curls,4 sets of 12 reps.,false,Legs,false,false,false,false,false,false,false,false,2024-11-29 17:21:39,2024-12-22 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+77,8,Bicep Curls,4 sets of 12 reps.,false,Legs,false,false,false,false,false,false,false,true,2024-12-19 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+78,8,Jumping Jacks,5 sets of 11 reps.,false,Arms,false,false,false,false,false,false,false,false,2024-11-29 17:21:39,2025-01-05 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+78,8,Jumping Jacks,5 sets of 11 reps.,false,Arms,false,false,false,false,false,false,false,true,2025-01-06 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+81,9,Pull-ups,4 sets of 8 reps.,true,Legs,false,false,false,true,false,false,false,false,2024-12-06 17:21:39,2024-12-29 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+81,9,Pull-ups,4 sets of 8 reps.,true,Legs,false,false,false,true,false,false,false,true,2024-12-28 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+82,9,Tricep Dips,5 sets of 10 reps.,true,Chest,false,true,false,false,false,false,false,false,2024-12-06 17:21:39,2025-01-03 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+82,9,Tricep Dips,5 sets of 10 reps.,true,Chest,false,true,false,false,false,false,false,true,2024-12-27 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+83,9,Lunges,5 sets of 15 reps.,true,Legs,false,false,true,false,false,false,false,false,2024-12-06 17:21:39,2025-01-05 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+83,9,Lunges,5 sets of 15 reps.,true,Legs,false,false,true,false,false,false,false,true,2025-01-08 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+84,9,Bench Press,5 sets of 13 reps.,true,Legs,false,true,false,false,true,false,true,false,2024-12-06 17:21:39,2025-01-03 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+84,9,Bench Press,5 sets of 13 reps.,true,Legs,false,true,false,false,true,false,true,true,2025-01-11 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+85,9,Jumping Jacks,5 sets of 10 reps.,false,Bodyweight,false,false,false,false,false,false,false,false,2024-12-06 17:21:39,2025-01-07 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+85,9,Jumping Jacks,5 sets of 10 reps.,false,Bodyweight,false,false,false,false,false,false,false,true,2025-01-02 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+86,9,Mountain Climbers,3 sets of 10 reps.,false,Bodyweight,false,false,false,false,false,false,false,false,2024-12-06 17:21:39,2024-12-28 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+86,9,Mountain Climbers,3 sets of 10 reps.,false,Bodyweight,false,false,false,false,false,false,false,true,2024-12-26 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+87,9,Burpees,4 sets of 8 reps.,true,Legs,false,true,false,false,false,false,false,false,2024-12-06 17:21:39,2025-01-12 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+87,9,Burpees,4 sets of 8 reps.,true,Legs,false,true,false,false,false,false,false,true,2025-01-07 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+88,9,Burpees,4 sets of 10 reps.,true,Chest,false,false,false,false,true,false,false,false,2024-12-06 17:21:39,2024-12-30 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+88,9,Burpees,4 sets of 10 reps.,true,Chest,false,false,false,false,true,false,false,true,2025-01-14 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+89,9,Jumping Jacks,3 sets of 14 reps.,true,Cardio,false,false,false,true,false,false,false,false,2024-12-06 17:21:39,2024-12-27 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+89,9,Jumping Jacks,3 sets of 14 reps.,true,Cardio,false,false,false,true,false,false,false,true,2024-12-26 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+91,10,Tricep Dips,3 sets of 8 reps.,false,Legs,false,false,false,false,false,false,false,false,2024-12-06 17:21:39,2025-01-15 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+91,10,Tricep Dips,3 sets of 8 reps.,false,Legs,false,false,false,false,false,false,false,true,2024-12-31 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+92,10,Plank Holds,4 sets of 8 reps.,false,Legs,false,false,false,false,false,false,false,false,2024-12-06 17:21:39,2024-12-28 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+92,10,Plank Holds,4 sets of 8 reps.,false,Legs,false,false,false,false,false,false,false,true,2025-01-15 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+93,10,Deadlifts,5 sets of 15 reps.,false,Legs,true,false,false,false,false,true,true,false,2024-12-06 17:21:39,2025-01-11 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+93,10,Deadlifts,5 sets of 15 reps.,false,Legs,true,false,false,false,false,true,true,true,2024-12-28 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+94,10,Jumping Jacks,3 sets of 11 reps.,false,Arms,false,false,false,false,false,false,false,false,2024-12-06 17:21:39,2024-12-28 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+94,10,Jumping Jacks,3 sets of 11 reps.,false,Arms,false,false,false,false,false,false,false,true,2025-01-11 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+95,10,Jumping Jacks,5 sets of 10 reps.,false,Chest,false,false,false,false,false,false,false,false,2024-12-06 17:21:39,2025-01-14 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+95,10,Jumping Jacks,5 sets of 10 reps.,false,Chest,false,false,false,false,false,false,false,true,2024-12-31 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+96,10,Cable Flys,4 sets of 12 reps.,false,Legs,false,false,false,false,false,false,false,false,2024-12-06 17:21:39,2025-01-10 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+96,10,Cable Flys,4 sets of 12 reps.,false,Legs,false,false,false,false,false,false,false,true,2025-01-08 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+97,10,Tricep Dips,5 sets of 11 reps.,false,Back,false,false,false,false,false,false,false,false,2024-12-06 17:21:39,2025-01-02 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+97,10,Tricep Dips,5 sets of 11 reps.,false,Back,false,false,false,false,false,false,false,true,2025-01-10 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne
+98,10,Jumping Jacks,5 sets of 9 reps.,true,Bodyweight,false,false,true,false,false,false,false,false,2024-12-06 17:21:39,2024-12-31 17:21:39,Automated_Ghost_Of_Jack_LaLanne
+98,10,Jumping Jacks,5 sets of 9 reps.,true,Bodyweight,false,false,true,false,false,false,false,true,2024-12-28 17:21:39,9999-12-31 23:59:59,Automated_Ghost_Of_Jack_LaLanne

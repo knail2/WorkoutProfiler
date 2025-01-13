@@ -1,6 +1,6 @@
 baseline_code_to_build_changes_on.txt
 
-my directory structure:
+my EVENTUAL directory structure:
 
 workout_profiler/
 ├── streamlit_app.py              # Main Streamlit entry point (Snowflake looks for this by default)
@@ -8,12 +8,30 @@ workout_profiler/
 │   ├── all_workouts.py       # Top-level page where all the workouts are listed
 │   ├── workout_details.py        # Each workout and its exercises are profiled on this page
 │   └── exercise_details.py       # Each exercise within a workout has details and lineage listed here.
+├── app_config/
+│   └── environment.py            # Detect if running locally or in Snowflake; set environment variables
+├── helpers/
+│   ├── snowflake_connection.py   # connection logic (if running locally) to connect to Snowflake
+│   ├── data_processing.py        # Reusable data transformation/util functions
+│   └── sql_queries.py            # SQL helper functions (SELECT, INSERT, UPDATE)
+├── resources/
+│   ├── images/                   # App images where the workout and exercise images are
+│   └── js/                       # Third-party & custom JS libraries
+│       ├── cytoscape.min.js
+│       ├── d3.min.js
+│       └── custom_code.js        # JS code accessed by Workout_Details.py and Exercise_Details.py
+└── scripts/
+    ├── upload_to_snowflake.py    # Example Python script to PUT code into Snowflake stage
+    └── update_streamlit_app.py   # Example script to CREATE/UPDATE the Snowflake Streamlit app
+
+
+we are focused on using streamlit_app.py , pages/ and helpers/ files for now.
+
 
 
 
 below is my main entry point for streamlit and the relevant pages.
 
-The output 
 
 streamlit_app.py
 =================
@@ -42,6 +60,7 @@ from helpers.snowflake_connection import create_snowflake_connection
 from helpers.data_processing import fetch_query_results
 from helpers.sql_queries import ALL_WORKOUTS_QUERY
 import pandas as pd
+import icecream as ic
 
 def show_all_workouts():
     st.title("All Workouts")
@@ -58,37 +77,33 @@ def show_all_workouts():
         st.error(f"An error occurred while fetching workouts: {e}")
         df = pd.DataFrame()
 
+    df.drop(columns=["WORKOUT_ID"], inplace=True)
+
+    # Replace 'workout_name' column logic with a for loop
+    for i in range(len(df)):
+        df.loc[i, "WORKOUT_NAME"] = f"workout_details?workout={df.loc[i, 'WORKOUT_NAME']}"
 
     # Display the data using st.data_editor
     if not df.empty:
         st.write("Data from all_workouts table:")
-        
-        # Create a column configuration for the workout_name column
-        workout_name_column = st.column_config.LinkColumn(
-            "workout_name",
-            help="Click to view workout details",
-            width="medium",
-            validate="^[A-Za-z0-9 ]+$",
-        )
-
+    
         # Use st.data_editor with the column configuration
         edited_df = st.data_editor(
             df,
             column_config={
-                "workout_name": workout_name_column,
+                "WORKOUT_NAME": st.column_config.LinkColumn(
+                    "Workout Links",
+                    help="Click on a workout to see details",
+                    display_text=r"workout_details\?workout=(.*)"
+                ),
             },
             hide_index=True,
-            disabled=["workout_name"],  # Make the workout_name column non-editable
-            use_container_width=True
+            disabled=["WORKOUT_NAME"],  # Make the workout_name column non-editable
+            use_container_width=True,
+            num_rows="dynamic"
         )
 
-        # Check if a workout was clicked
-        if st.session_state.get('data_editor_clicked'):
-            clicked_workout = st.session_state['data_editor_clicked']['workout_name']['value']
-            st.switch_page("pages/workout_details.py")
-            st.experimental_set_query_params(workout=clicked_workout)
 
-# This allows the function to be called from streamlit_app.py
 if __name__ == "__main__":
     show_all_workouts()
 
@@ -99,18 +114,61 @@ pages/workout_details.py
 
 import streamlit as st
 
-def main():
-    # Get the workout name from query parameters
-    query_params = st.experimental_get_query_params()
-    workout_name = query_params.get("workout", [""])[0]  # Default to empty string if not found
+# Get the workout entry from the URL parameters
+workout = st.query_params.get("workout", "Cardio Blast")
 
-    # Display the workout details
-    if workout_name:
-        st.title(f"Hello {workout_name}")
-    else:
-        st.error("No workout name provided.")
+# Display the workout details
+st.title(f"Workout Details: {workout}")
+st.write(f"Hello {workout}")
 
-if __name__ == "__main__":
-    main()
+
+
+helpers/data_processing.py
+==========================
+import pandas as pd
+
+def fetch_query_results(cursor):
+    """Fetch results from a Snowflake cursor and return as a Pandas DataFrame."""
+    data = cursor.fetchall()
+    columns = [desc[0] for desc in cursor.description]
+    return pd.DataFrame(data, columns=columns)
+
+
+
+helpers/snowflake_connection.py
+===============================
+import streamlit as st
+import snowflake.connector
+
+def create_snowflake_connection():
+    """Creates and returns a Snowflake connection."""
+    return snowflake.connector.connect(
+        user=st.secrets["snowflake"]["user"],
+        password=st.secrets["snowflake"]["password"],
+        account=st.secrets["snowflake"]["account"],
+        warehouse=st.secrets["snowflake"]["warehouse"],
+        database=st.secrets["snowflake"]["database"],
+        schema=st.secrets["snowflake"]["schema"]
+    )
+
+
+helpers/sql_queries.py
+======================
+# Store pre-defined SQL queries here
+ALL_WORKOUTS_QUERY = "SELECT * FROM all_workouts"
+SPECIFIC_DETAILS_OF_WORKOUT = "SELECT exercise_name, exercise_description, critical_exercise_selection, exercise_classification, \
+                                    strength, endurance, flexibility, balance, cardio, power, primary_movement, profiled_by \
+                                FROM workout_details_2  \
+                                WHERE WORKOUT_NAME = " # 'Cardio Blast' for example would be concatenated to this.
+
+
+
+
+REQUEST:
+
+I want you to create me updated code for workout_details.py which concatenates the workout name passed to it to the SPECIFIC_DETAILS_OF_WORKOUT and send a request to snowflake (like is being done in all_workouts.py) and print the output in a st.data_editor. 
+
+In the data_editor , make the exercise_name, exercise_description
+
 
 
