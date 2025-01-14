@@ -1,3 +1,4 @@
+import streamlit as st
 from snowflake.snowpark.context import get_active_session
 
 def is_snowflake_environment():
@@ -23,7 +24,6 @@ def get_environment_config():
             "environment": "snowflake",
             "database": session.get_current_database(),
             "schema": session.get_current_schema(),
-            "stage": session.get_current_stage(),
             "use_snowflake_connector": False,  # Connector not required within Snowflake
         }
     else:
@@ -35,3 +35,27 @@ def get_environment_config():
             "stage": None,
             "use_snowflake_connector": True,
         }
+
+# Streamlit app main function
+def main():
+    st.title("Environment Detector")
+
+    # Get the environment configuration
+    config = get_environment_config()
+
+    # Display the detected environment and relevant details
+    st.subheader("Current Environment")
+    st.write(f"Environment: **{config['environment']}**")
+
+    if config["environment"] == "snowflake":
+        st.subheader("Snowflake Details")
+        st.write(f"Database: **{config['database']}**")
+        st.write(f"Schema: **{config['schema']}**")
+        st.write(f"Use Snowflake Connector: **{config['use_snowflake_connector']}**")
+    else:
+        st.subheader("Local Environment")
+        st.write("Running in local mode.")
+        st.write(f"Use Snowflake Connector: **{config['use_snowflake_connector']}**")
+
+if __name__ == "__main__":
+    main()

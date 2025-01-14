@@ -1,4 +1,5 @@
 streamlit
+streamlit-aggrid
 snowflake-snowpark-python
 pandas
 snowflake-connector-python

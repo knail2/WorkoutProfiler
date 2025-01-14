@@ -156,10 +156,11 @@ helpers/sql_queries.py
 ======================
 # Store pre-defined SQL queries here
 ALL_WORKOUTS_QUERY = "SELECT * FROM all_workouts"
-SPECIFIC_DETAILS_OF_WORKOUT = "SELECT exercise_name, exercise_description, critical_exercise_selection, exercise_classification, \
-                                    strength, endurance, flexibility, balance, cardio, power, primary_movement, profiled_by \
-                                FROM workout_details_2  \
-                                WHERE WORKOUT_NAME = " # 'Cardio Blast' for example would be concatenated to this.
+SPECIFIC_DETAILS_OF_WORKOUT = "SELECT WORKOUT_NAME, exercise_name, exercise_description, critical_exercise_selection, \
+                                    exercise_classification, strength, endurance, flexibility, balance, cardio, \
+                                    power, primary_movement, profiled_by \
+                                FROM workout_details_2 \
+                                WHERE current_row = TRUE AND WORKOUT_NAME = " # 'Cardio Blast' for example would be concatenated to this. 'Cardio Blast'  
 
 
 
@@ -168,7 +169,18 @@ REQUEST:
 
 I want you to create me updated code for workout_details.py which concatenates the workout name passed to it to the SPECIFIC_DETAILS_OF_WORKOUT and send a request to snowflake (like is being done in all_workouts.py) and print the output in a st.data_editor. 
 
-In the data_editor , make the exercise_name, exercise_description
+In the data_editor , make the exercise_name, exercise_description and profiled_by non editable.
+make strength, endurance, flexibility, balance, cardio, power, primary_movement a drop down option, something like:
+
+        column_config={
+            "exercise_classification": st.column_config.SelectboxColumn(
+                "Classification",
+                options=df['exercise_classification'].unique(),
+                required=True
+            )
+            ....
+        },
+
 
 
 

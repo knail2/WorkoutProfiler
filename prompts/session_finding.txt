@@ -1,0 +1,56 @@
+my enviorment.py code is flawed. there is no such thing as "SNOWFLAKE_APP" in os.environ  . please use the correct way to find which env I'm in and return the appropriate value
+
+also note. when i'm in a local env the use snowflake connector is True. when in snowflake environment return the database, schema, and stage using the functions available in from the object instantiated by get_active_session() 
+
+
+app_config/environment.py
+=========================
+
+import os
+
+def is_snowflake_environment():
+    """Detect if the app is running inside Snowflake."""
+    return "SNOWFLAKE_APP" in os.environ
+
+def get_environment_config():
+    if is_snowflake_environment():
+        return {
+            "environment": "snowflake",
+            "snowflake_stage": os.getenv("SNOWFLAKE_STAGE"),
+            "use_snowflake_connector": True,
+        }
+    else:
+        return {
+            "environment": "local",
+            "snowflake_stage": None,
+            "use_snowflake_connector": False,
+        }
+
+
+
+
+
+
+correct code to check which environment I'm in:
+===================================
+
+from snowflake.snowpark.context import get_active_session
+import streamlit as st
+
+def main():
+    st.title("Environment Detection")
+
+    try:
+        # Attempt to retrieve the active session
+        session = get_active_session()
+        # If successful, print Snowflake environment details
+        st.success("This is running in Snowflake.")
+        st.write("Database:", session.get_current_database())
+        st.write("Schema:", session.get_current_schema())
+    except Exception as e:
+        # Handle the exception if not running in Snowflake
+        st.warning("This is running on a laptop or local environment.")
+        st.error(f"Error: {e}")
+
+if __name__ == "__main__":
+    main()
